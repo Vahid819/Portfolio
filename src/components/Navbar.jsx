@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Logo } from "@/../public/index";
 import { AlignJustify } from "lucide-react";
 import { useState } from "react";
+import { ModeToggle } from "./ModeToggle";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -29,7 +30,7 @@ function Navbar() {
           className="rounded-full"
         />
       </section>
-      <section className={`p-5`}>
+      <section className={`flex gap-2 items-center p-5`}>
         <Menubar className={"bg-transparent border md:flex hidden"}>
           <MenubarMenu>
             <Link href={"/"}>
@@ -61,6 +62,7 @@ function Navbar() {
           className="md:hidden block"
           onClick={() => setMenu(!menu ? true : false)}
         />
+        <ModeToggle />
       </section>
     </nav>
   ) : (
@@ -75,11 +77,12 @@ function Navbar() {
             className="rounded-full"
           />
         </section>
-        <section className={`px-5 py-8`}>
+        <section className={`flex items-center px-5 py-8`}>
           <AlignJustify
             className="md:hidden block"
             onClick={() => setMenu(!menu ? true : false)}
           />
+          <ModeToggle className={"bg-transparent"} />
         </section>
       </div>
       <Menubar className={"w-full h-full bg-transparent border-none flex flex-col justify-center items-center "}>
@@ -89,24 +92,26 @@ function Navbar() {
             </Link>
           </MenubarMenu>
           <MenubarMenu>
-            <Link href={"/"}>
-              <MenubarTrigger className={"text-2xl"}>About</MenubarTrigger>
+            <Link href={"#about"}>
+              <MenubarTrigger className={"text-2xl"}>
+                About
+                </MenubarTrigger>
             </Link>
           </MenubarMenu>
           <MenubarMenu>
-            <Link href={"/"}>
+            <Link href={"#projects"}>
               <MenubarTrigger className={"text-2xl"}>Projects</MenubarTrigger>
             </Link>
           </MenubarMenu>
           <MenubarMenu>
-            <Link href={"/"}>
+            <Link href={"#languages"}>
               <MenubarTrigger className={"text-2xl"}>Languages</MenubarTrigger>
             </Link>
           </MenubarMenu>
           <MenubarMenu>
-            <Link href={"/"}>
-              <MenubarTrigger className={"text-2xl"}>Contact</MenubarTrigger>
-            </Link>
+            {/* <Link href={"#contact"}> */}
+              <MenubarTrigger href={"#contact"} className={"text-2xl"}>Contact</MenubarTrigger>
+            {/* </Link> */}
           </MenubarMenu>
         </Menubar>
     </nav>
