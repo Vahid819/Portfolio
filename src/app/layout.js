@@ -19,6 +19,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="pJx0fh_bsGudScouiGYhLAOUEAAbphUK-KagpQ_vVOg"
+        />
+      </head>
       <body
         className={`${montserrat} ${raleway} antialiased`}
         cz-shortcut-listen="true"
