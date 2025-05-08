@@ -1,11 +1,13 @@
 import React from "react";
-import { Background, Download, Profileimage, Aboutbanar } from "@/../public/index";
+import { Background, Download, Profileimage} from "@/../public/index";
 import Image from "next/image";
 import { Instagram, Facebook, Linkedin, Github } from "lucide-react";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import Services from "@/components/services";
+import Projects from "@/components/Projects";
+
 
 function page() {
   return (
@@ -54,7 +56,7 @@ function page() {
         <div className="md:w-[50%] w-full h-full flex justify-center items-center">
           <Image
             src={Background}
-            width={700}
+            width={600}
             height={700}
             alt="This is a image"
             className="md:block hidden"
@@ -129,6 +131,9 @@ function page() {
         <div className="flex gap-3 justify-center">
           <h2 className="text-4xl text-[#2cc295]">Project</h2>
           <h1 className="text-4xl text-[#2cc295]">Portfolio</h1>
+        </div>
+        <div>
+          <Projects />
         </div>
       </section>
       <section id="language">
