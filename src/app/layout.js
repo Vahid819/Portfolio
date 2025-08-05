@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         cz-shortcut-listen="true"
-        data-new-gr-c-s-check-loaded="14.1246.0"
+        data-new-gr-c-s-check-loaded="14.1247.0"
         data-gr-ext-installed=""
       >
         {children}

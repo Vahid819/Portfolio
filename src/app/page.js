@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button } from '@/components/ui/button'
+import Navbar from '@/components/Navbar'
 
 function page() {
   return (
     <div>
-      This is my portfolio website
+      <Navbar />
     </div>
   )
 }
